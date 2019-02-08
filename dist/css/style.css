@@ -1,0 +1,232 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 48%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #fff;
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 18rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-rows: repeat(3, 100vh); }
+
+.full__screen {
+  text-align: center;
+  height: 100vh; }
+
+.getting__details .team__one,
+.getting__details .team__two,
+.getting__details .match__overs,
+.getting__details .players__count,
+.getting__details .match__venue {
+  width: 30rem;
+  height: 4rem;
+  padding: 1rem;
+  display: block;
+  margin: 2rem auto; }
+
+.getting__details-submit {
+  width: 10rem;
+  height: 5rem;
+  margin: 2rem auto; }
+
+.toss {
+  display: none;
+  font-size: 3rem;
+  color: white;
+  margin: 10% auto; }
+  .toss__submit {
+    width: 10rem;
+    height: 5rem;
+    margin: 2rem auto; }
+  .toss__winning {
+    display: block;
+    margin-bottom: 4rem; }
+  .toss .bat__bowl {
+    display: block;
+    margin-bottom: 2rem; }
+
+.wonby-1,
+.wonby-2 {
+  text-transform: capitalize; }
+
+.wonby,
+.elect {
+  margin-right: .5rem;
+  margin-left: 1.5rem; }
+
+.runout {
+  display: none;
+  flex-direction: column; }
+  .runout__input,
+  .runout .batsmen__runout,
+  .runout .bowler__runout {
+    width: 30rem;
+    height: 4rem;
+    padding: 1rem;
+    display: block;
+    margin: 2rem auto; }
+  .runout__close, .runout__submit {
+    width: 10rem;
+    height: 5rem;
+    margin: 2rem auto; }
+
+.bowler__over {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem; }
+  .bowler__over-select {
+    width: 30rem;
+    height: 4rem;
+    padding: 1rem;
+    display: block;
+    margin: 2rem auto; }
+  .bowler__over-submit {
+    width: 10rem;
+    height: 5rem;
+    margin: 2rem auto; }
+
+.header__informations {
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-columns: 2fr minmax(max-content, 1fr) 2fr; }
+  .header__informations .header__team {
+    font-size: 3rem;
+    text-align: center; }
+    .header__informations .header__team-name {
+      font-weight: 400; }
+    .header__informations .header__team-score {
+      font-size: 2rem; }
+    .header__informations .header__team-wickets {
+      color: red; }
+  .header__informations .header__details {
+    font-size: 2rem; }
+
+.header__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+
+.btn {
+  width: 10rem;
+  height: 5rem;
+  margin-bottom: .5rem; }
+
+.getting__details {
+  display: block; }
+
+.players__name {
+  display: none;
+  margin: 10rem auto; }
+  .players__name-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .players__name-heading {
+    text-align: center;
+    color: white;
+    font-size: 2rem; }
+  .players__name .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .players__name .left > * {
+      margin-bottom: 1rem;
+      height: 3rem;
+      width: 40rem;
+      border-radius: 1rem;
+      padding-left: 1rem; }
+    .players__name .left__heading {
+      color: white;
+      font-size: 1.5rem;
+      text-transform: capitalize; }
+  .players__name .right {
+    display: flex;
+    flex-direction: column; }
+    .players__name .right > * {
+      margin-bottom: 1rem;
+      height: 3rem;
+      width: 40rem;
+      border-radius: 1rem;
+      padding-left: 1rem; }
+    .players__name .right__heading {
+      color: white;
+      font-size: 1.5rem;
+      text-transform: capitalize; }
+  .players__name-submit {
+    width: 10rem;
+    height: 4rem;
+    border-radius: 1.5rem; }
+
+.Players__on__crease {
+  margin: 15rem 50rem;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+  .Players__on__crease-batsmen {
+    display: flex;
+    margin-bottom: 5rem;
+    align-items: center; }
+  .Players__on__crease .batsmen__striker {
+    height: 3rem; }
+    .Players__on__crease .batsmen__striker-label {
+      color: white;
+      font-size: 2.5rem;
+      margin-left: 3rem;
+      padding-right: 1rem; }
+  .Players__on__crease .batsmen__nonStriker {
+    height: 3rem;
+    margin-bottom: 5rem; }
+  .Players__on__crease .bowler {
+    height: 3rem;
+    margin-bottom: 5rem; }
+  .Players__on__crease-submit {
+    height: 3rem;
+    width: 7rem; }
+
+.header {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: min-content max-content; }
+
+.scorecard {
+  grid-column: full-start / full-end;
+  background-color: steelblue; }
+
+.details {
+  grid-column: center-start / center-end;
+  background-color: burlywood; }
+
+.full__screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+  display: block; }

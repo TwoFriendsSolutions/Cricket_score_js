@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <title>cricket score</title>
+</head>
+
+<body>
+    <div class="full__screen">
+        <div class="getting__details">
+            <input type="text" class="team__one" placeholder="Enter your team name">
+            <input type="text" class="team__two" placeholder="Enter your opponent name">
+            <input type="number" class="match__overs" placeholder="How many overs" min="1">
+            <input type="number" class="players__count" placeholder="Number of players in each team" min="4" max="11">
+            <input type="text" class="match__venue" placeholder="Eg:perundurai cricket ground">
+            <button type="submit" class="getting__details-submit" >Submit</button>
+        </div>
+        <div class="runout">
+            <input class="runout__input" type="number" placeholder="no of runs batsman scored" min="0" max="6">
+            <select class="batsmen__runout">
+                <option selected>select batsmen(Run-out)</option>
+            </select>
+            <select class="bowler__runout">
+                <option selected>wicket taken by</option>
+            </select>
+            <button class="runout__close">close</button>
+            <button class="runout__submit">submit</button>
+        </div>
+        <div class="toss">
+            <label class="toss__winning">Toss Won By :
+                <input type="radio" name="wonby" id="team1" value="team1" class="wonby won-1">
+                <label class="wonby-1" for="team1">India</label>
+                <input type="radio" name="wonby" id="team2" value="team2" class="wonby won-2">
+                <label class="wonby-2" for="team2">Australia</label><br>
+            </label>
+            <label class="bat__bowl">Choose To :
+                <input type="radio" id="bat" name="elect" value="bat" class="elect elect-1">
+                <label for="bat">Batting</label>
+                <input type="radio" id="bowl" name="elect" value="bowl" class="elect elect-2">
+                <label for="bowl">Bowling</label><br />
+            </label>
+            <button class="toss__submit">Submit</button>
+        </div>
+        <div class="players__name">
+            <h2 class="players__name-heading">Enter Players Name List</h2>
+            <div class="players__name-container">
+                <div class="left">
+                    <h3 class="left__heading">INDIA</h3>
+                    <!--
+                        <input type="text" class="players__name-0-0" placeholder="Player 1">
+                        <input type="text" class="players__name-0-1" placeholder="Player 2">
+                        <input type="text" class="players__name-0-2" placeholder="Player 3">
+                        <input type="text" class="players__name-0-3" placeholder="Player 4">
+                        <input type="text" class="players__name-0-4" placeholder="Player 5">
+                        <input type="text" class="players__name-0-5" placeholder="Player 6">
+                        <input type="text" class="players__name-0-6" placeholder="Player 7">
+                        <input type="text" class="players__name-0-7" placeholder="Player 8">
+                        <input type="text" class="players__name-0-8" placeholder="Player 9">
+                        <input type="text" class="players__name-0-9" placeholder="Player 10">
+                        <input type="text" class="players__name-0-10" placeholder="Player 11">
+-->
+                </div>
+                <div class="right">
+                    <h3 class="right__heading">NewZeland</h3>
+                    <!--
+                        <input type="text" class="players__name-1-0" placeholder="Player 1">
+                        <input type="text" class="players__name-1-1" placeholder="Player 2">
+                        <input type="text" class="players__name-1-2" placeholder="Player 3">
+                        <input type="text" class="players__name-1-3" placeholder="Player 4">
+                        <input type="text" class="players__name-1-4" placeholder="Player 5">
+                        <input type="text" class="players__name-1-5" placeholder="Player 6">
+                        <input type="text" class="players__name-1-6" placeholder="Player 7">
+                        <input type="text" class="players__name-1-7" placeholder="Player 8">
+                        <input type="text" class="players__name-1-8" placeholder="Player 9">
+                        <input type="text" class="players__name-1-9" placeholder="Player 10">
+                        <input type="text" class="players__name-1-10" placeholder="Player 11">
+-->
+                </div>
+            </div>
+            <button class="players__name-submit">Submit</button>
+        </div>
+        <div class="Players__on__crease">
+            <div class="Players__on__crease-batsmen">
+                <select class="batsmen__striker">
+                    <option selected>select player 1</option>
+                </select>
+                <div class="batsmen__striker-radio">
+                    <label for="striker" class="batsmen__striker-label">Striker</label>
+                    <input type="radio" value="striker" id="striker" name="strike">
+                    <label for="NonStriker" class="batsmen__striker-label">NonStriker</label>
+                    <input type="radio" value="nonStriker" id="NonStriker" name="strike">
+                </div>
+            </div>
+            <!--             COMMENT IT OUT   -->
+            <!--
+                <div>
+                    <select class="batsmen__nonStriker">
+                        <option selected>select player 2</option>
+                        <option selected>1</option>
+                        <option selected>2</option>
+                    </select>
+                </div>
+-->
+
+            <div class="Players__on__crease-bowler">
+                <select class="bowler">
+                    <option selected>Choose Bowler</option>
+                </select>
+            </div>
+            <div>
+                <button class="Players__on__crease-submit">Submit</button>
+            </div>
+        </div>
+        <div class="bowler__over">
+            <select class="bowler__over-select">
+                <option selected>Choose Bowler</option>
+            </select>
+            <button class="bowler__over-submit">Submit</button>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="header__informations">
+                <div class="header__team header__team-0">
+                    <div class="header__team-name header__team-0-name">india</div>
+                    <div class="header__team-score header__team-0-score">
+                        <p><span class="header__team-run header__team-0-run">450</span> &#47; <span class="header__team-wickets header__team-0-wickets">7</span></p>
+                        <p>Overs&#58; <span class="header__team-overs header__team-0-overs">32.5</span></p>
+                        <p>RR&#58; <span class="header__team-rr header__team-0-rr">7.50</span></p>
+                    </div>
+                </div>
+                <div class="header__details">
+                    <p class="header__details-venue">Perundurai cricket ground</p>
+                    <p class="header__details-toss">Toss won by <span class="team-name">india</span> and choose to <span class="bat-bowl">bat</span> first</p>
+                    <p class="header__details-overs"><span class="overs-number">50</span> over match</p>
+                    <p class="header__details-target">target&#58; <span class="target">451</span></p>
+                    <p class="header__details-win"><span class="team-name-chasing">australia</span> still need <span class="remaining-runs">10</span> runs to win the match</p>
+                    <p class="header__details-remaining__balls">remaining balls&#58; <span class="remaining-balls">300</span></p>
+                    <p class="header__details-crr">current-run-rate&#58; <span class="crr">5.00</span></p>
+                    <p class="header__details-rr">required-run-rate&#58; <span class="rr">15.00</span></p>
+                </div>
+                <div class="header__team header__team-1">
+                    <div class="header__team-name header__team-1-name">Australia</div>
+                    <div class="header__team-score header__team-1-score">
+                        <p><span class="header__team-run header__team-1-run">300</span> &#47; <span class="header__team-wickets header__team-1-wickets">7</span></p>
+                        <p>Overs&#58; <span class="header__team-overs header__team-1-overs">32.5</span></p>
+                        <p>RR&#58; <span class="header__team-rr header__team-1-rr">7.50</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__buttons">
+                <div class="btn__runs">
+                    <button class="btn btn-runs btn-run" value="0">0</button>
+                    <button class="btn btn-runs btn-run" value="1">1</button>
+                    <button class="btn btn-runs btn-run" value="2">2</button>
+                    <button class="btn btn-runs btn-run" value="3">3</button>
+                    <button class="btn btn-runs btn-run" value="4">4</button>
+                    <button class="btn btn-runs btn-run" value="5">5</button>
+                    <button class="btn btn-runs btn-run" value="6">6</button>
+                    <button class="btn btn-runs btn-run" value="7">7</button>
+                </div>
+                <div class="btn__wide">
+                    <button class="btn btn-runs btn-wide" value="1">wide</button>
+                    <button class="btn btn-runs btn-wide" value="2">wide+1</button>
+                    <button class="btn btn-runs btn-wide" value="3">wide+2</button>
+                    <button class="btn btn-runs btn-wide" value="4">wide+3</button>
+                    <button class="btn btn-runs btn-wide" value="5">wide+4</button>
+                    <button class="btn btn-runs btn-wide" value="6">wide+5</button>
+                </div>
+                <div class="btn__noball">
+                    <button class="btn btn-runs btn-no" value="1">noball</button>
+                    <button class="btn btn-runs btn-no" value="2">noball+1</button>
+                    <button class="btn btn-runs btn-no" value="3">noball+2</button>
+                    <button class="btn btn-runs btn-no" value="4">noball+3</button>
+                    <button class="btn btn-runs btn-no" value="5">noball+4</button>
+                    <button class="btn btn-runs btn-no" value="6">noball+5</button>
+                    <button class="btn btn-runs btn-no" value="7">noball+6</button>
+                </div>
+                <div class="btn__lb">
+                    <button class="btn btn-runs btn-lb" value="1">lb+1</button>
+                    <button class="btn btn-runs btn-lb" value="2">lb+2</button>
+                    <button class="btn btn-runs btn-lb" value="3">lb+3</button>
+                    <button class="btn btn-runs btn-lb" value="4">lb+4</button>
+                </div>
+                <div class="btn__byes">
+                    <button class="btn btn-runs btn-bye" value="1">byes+1</button>
+                    <button class="btn btn-runs btn-bye" value="2">byes+2</button>
+                    <button class="btn btn-runs btn-bye" value="3">byes+3</button>
+                    <button class="btn btn-runs btn-bye" value="4">byes+4</button>
+                </div>
+                <div class="btn__wickets">
+                    <button class="btn btn-wicket" value="Catch">Catch</button>
+                    <button class="btn btn-wicket" value="Bowled">Bowled</button>
+                    <button class="btn btn-wicket" value="C&B">Caught&amp;Bowled</button>
+                    <button class="btn btn-wicket" value="Hit-Wicket">Hit&#45;wicket</button>
+                    <button class="btn btn-wicket" value="Stump-It">stump&#45;it</button>
+                    <button class="btn btn__runout">run out</button>
+                </div>
+
+            </div>
+        </header>
+        <div class="scorecard">scorecard</div>
+        <div class="details">details</div>
+    </div>
+</body>
+
+</html>
